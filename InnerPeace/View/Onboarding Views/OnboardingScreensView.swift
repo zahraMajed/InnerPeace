@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingScreensView: View {
     
     //MARK: Variable
-    //@Binding var shouldShowOnboarding: Bool
+    @Binding var shouldShowOnboarding: Bool
     
     //MARK: Body
     var body: some View {
@@ -19,7 +19,7 @@ struct OnboardingScreensView: View {
                 imageName: "OnBording1",
                 title: "Blessed you’re here",
                 subtitle: "We help you find a best version of yourself, healthier, happier life!",
-                showDismissBtn: false
+                showDismissBtn: false, shouldShowOnboarding: $shouldShowOnboarding
                 //,shouldShowOnboarding: $shouldShowOnboarding
             ).tag(0)
             
@@ -28,7 +28,7 @@ struct OnboardingScreensView: View {
                 title: "Start small, Go big!",
                 subtitle: "We help you deal with depression and anxiety by building a flexible wellness routine.",
                 showDismissBtn: true
-                //,shouldShowOnboarding: $shouldShowOnboarding
+                ,shouldShowOnboarding: $shouldShowOnboarding
             ).tag(1)
             
         }.ignoresSafeArea()
@@ -39,6 +39,6 @@ struct OnboardingScreensView: View {
 
 struct OnboardingScreensView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreensView()
+        OnboardingScreensView(shouldShowOnboarding: .constant(true))
     }
 }

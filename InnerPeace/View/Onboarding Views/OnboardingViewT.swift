@@ -14,7 +14,7 @@ struct OnboardingViewT: View {
     let title:String
     let subtitle: String
     let showDismissBtn: Bool
-    //@Binding var shouldShowOnboarding: Bool
+    @Binding var shouldShowOnboarding: Bool
     
     //MARK: Body
     var body: some View {
@@ -40,7 +40,7 @@ struct OnboardingViewT: View {
             Spacer()
             if showDismissBtn {
                 Button("Get Started") {
-                    //shouldShowOnboarding.toggle()
+                    shouldShowOnboarding.toggle()
                 }
                 .frame(width: 327, height: 41)
                 .background(Color("PrimaryColorB"))
@@ -58,6 +58,6 @@ struct OnboardingViewT_Previews: PreviewProvider {
         OnboardingViewT(imageName: "OnBording2",
                         title: "Start small, Go big!",
                         subtitle: "We help you deal with depression and anxiety by building a flexible wellness routine.",
-                        showDismissBtn: true)
+                        showDismissBtn: true, shouldShowOnboarding: .constant(true))
     }
 }

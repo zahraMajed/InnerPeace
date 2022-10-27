@@ -10,14 +10,14 @@ import SwiftUI
 struct TestIntroView: View {
     
     //MARK: Variable
-    //@AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     //MARK: Body
     var body: some View {
         Text("Hello, test Homepage is here!")
-            //.fullScreenCover(isPresented: $shouldShowOnboarding) {
-            //OnboardingScreenView(shouldShowOnboarding: $shouldShowOnboarding)
-        //}
+            .fullScreenCover(isPresented: $shouldShowOnboarding) {
+                OnboardingScreensView(shouldShowOnboarding: $shouldShowOnboarding)
+        }
     }
 }
 
