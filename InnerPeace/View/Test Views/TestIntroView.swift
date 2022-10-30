@@ -15,12 +15,16 @@ struct TestIntroView: View {
     //MARK: Body
     var body: some View {
         VStack {
-            Image("OnBording2")
+            
+            /*Image("OnBording2")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 390, height: 238)
                 .clipped()
-                .offset(x: 0, y: 100)
+                .offset(x: 0, y: 100)*/
+            
+            
+            LottieView(JSONFileName: "Logo").frame(width: 390, height: 238, alignment: .center).offset(x: 0, y: 80)
             
             //Title and Subtitle
             VStack (alignment: .center,spacing: 18) {
