@@ -35,12 +35,12 @@
 		2B39E0F4290A8C0B004B4284 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntroView.swift; sourceTree = "<group>"; };
 		2B39E101290E628B004B4284 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		2B39E107290E6E48004B4284 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Logo.json; path = ../../../../Downloads/Logo.json; sourceTree = "<group>"; };
+		2B39E107290E6E48004B4284 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
 		2B819662290EC95700C5649B /* TestBreakView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView2.swift; sourceTree = "<group>"; };
-		2B81966B290FAD0800C5649B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader.json; path = ../../../../Downloads/Loader.json; sourceTree = "<group>"; };
+		2B81966B290FAD0800C5649B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
 		2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRoutineView.swift; sourceTree = "<group>"; };
 		2B819670290FC9F100C5649B /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
-		2B819672290FCACB00C5649B /* Loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader2.json; path = ../../../../Downloads/Loader2.json; sourceTree = "<group>"; };
+		2B819672290FCACB00C5649B /* Loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader2.json; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,7 @@
 				2B819664290FA8CE00C5649B /* Break Views */,
 				2B819667290FA92A00C5649B /* Anxiety Test Views */,
 				2B819668290FA95400C5649B /* Depression Test Views */,
-				2B81966A290FA97C00C5649B /* Habits pregrences views */,
+				2B81966A290FA97C00C5649B /* Habits Prefrence views */,
 				2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */,
 				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
 				2B819662290EC95700C5649B /* TestBreakView2.swift */,
@@ -159,11 +159,11 @@
 			path = "Depression Test Views";
 			sourceTree = "<group>";
 		};
-		2B81966A290FA97C00C5649B /* Habits pregrences views */ = {
+		2B81966A290FA97C00C5649B /* Habits Prefrence views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Habits pregrences views";
+			path = "Habits Prefrence views";
 			sourceTree = "<group>";
 		};
 		2B81966F290FC9C100C5649B /* Routine Views */ = {
