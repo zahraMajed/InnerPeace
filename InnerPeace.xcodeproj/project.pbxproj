@@ -126,44 +126,12 @@
 		2B39E0F6290A8C35004B4284 /* Test Views */ = {
 			isa = PBXGroup;
 			children = (
-				2B819664290FA8CE00C5649B /* Break Views */,
-				2B819667290FA92A00C5649B /* Anxiety Test Views */,
-				2B819668290FA95400C5649B /* Depression Test Views */,
-				2B81966A290FA97C00C5649B /* Habits Prefrence views */,
-				2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */,
-				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
-				2B819662290EC95700C5649B /* TestBreakView2.swift */,
-				2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */,
+				2B81967429100A9800C5649B /* Test Break Views */,
+				2B81967529100AE300C5649B /* Anxiety Test Views */,
+				2B81967629100AEE00C5649B /* Depression Test Views */,
+				2B81967729100B0000C5649B /* Habits Prefrences Views */,
 			);
 			path = "Test Views";
-			sourceTree = "<group>";
-		};
-		2B819664290FA8CE00C5649B /* Break Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Break Views";
-			sourceTree = "<group>";
-		};
-		2B819667290FA92A00C5649B /* Anxiety Test Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Anxiety Test Views";
-			sourceTree = "<group>";
-		};
-		2B819668290FA95400C5649B /* Depression Test Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Depression Test Views";
-			sourceTree = "<group>";
-		};
-		2B81966A290FA97C00C5649B /* Habits Prefrence views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Habits Prefrence views";
 			sourceTree = "<group>";
 		};
 		2B81966F290FC9C100C5649B /* Routine Views */ = {
@@ -172,6 +140,38 @@
 				2B819670290FC9F100C5649B /* RoutineView.swift */,
 			);
 			path = "Routine Views";
+			sourceTree = "<group>";
+		};
+		2B81967429100A9800C5649B /* Test Break Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
+				2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */,
+				2B819662290EC95700C5649B /* TestBreakView2.swift */,
+				2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */,
+			);
+			path = "Test Break Views";
+			sourceTree = "<group>";
+		};
+		2B81967529100AE300C5649B /* Anxiety Test Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Anxiety Test Views";
+			sourceTree = "<group>";
+		};
+		2B81967629100AEE00C5649B /* Depression Test Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Depression Test Views";
+			sourceTree = "<group>";
+		};
+		2B81967729100B0000C5649B /* Habits Prefrences Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Habits Prefrences Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
