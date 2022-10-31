@@ -23,60 +23,67 @@ struct RoutineView: View {
     //MARK: Body
     var body: some View {
         VStack{
+            Spacer()
             Text("Good morning!")
                 .font(.custom("Helvetica", size: 25))
                 .fontWeight(.bold)
-                .foregroundColor(Color.yellow)
+                .foregroundColor(Color.black)
                 .multilineTextAlignment(.center)
                 .frame(width: 353, height: 60, alignment: .leading)
-            
+            Spacer()
             ZStack{
-                RoundedRectangle(cornerRadius: 8).frame(width: 364, height: 317)
+                Image("ProgressRectangle")
+                    .resizable()
+                    .scaledToFit()
+                    .aspectRatio(contentMode: .fill).frame(width: 364, height: 317)
                 
                 VStack {
+                    Spacer()
                     Text(Date.now, style: .date)
                         .font(.custom("Helvetica", size: 25))
                         .fontWeight(.bold)
-                        .foregroundColor(Color.yellow)
+                        .foregroundColor(Color.black)
                         .multilineTextAlignment(.center)
-                    
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     Text("My weekly progress")
                         .font(.custom("Helvetica", size: 21))
                         .fontWeight(.regular)
-                        .foregroundColor(Color.yellow)
+                        .foregroundColor(Color.black)
                         .multilineTextAlignment(.center)
-                    
+                        .padding()
                     
                     VStack (spacing: 10){
                         HStack(spacing: 18){
                             Text("Mon")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Tue")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Wed")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Thu")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Fri")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Sat")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                             Text("Sun")
                                 .font(.custom("Helvetica", size: 18))
                                 .fontWeight(.regular)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(Color.black)
                         }
                         HStack(spacing: 27){
                             Button {
@@ -122,13 +129,15 @@ struct RoutineView: View {
                             }
                         }
                     }//end progress VStack
+                    Spacer()
                 }
             }// end ZStack
-            
+            Spacer()
+    
             Text("Today’s Routine")
                 .font(.custom("Helvetica", size: 25))
                 .fontWeight(.bold)
-                .foregroundColor(Color.yellow)
+                .foregroundColor(Color.black)
                 .multilineTextAlignment(.center)
                 .frame(width: 353, height: 60, alignment: .leading)
             
