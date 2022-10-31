@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TestBreakView2: View {
+    
+    //MARK: Body
     var body: some View {
-        TestBreakView(subTitle: "Exercise can help manage depression!", btnText: "Start building habits")
+        TestBreakView(subTitle: "Exercise can help manage depression!", btnText: "Start Building Habits")
     }
 }
 

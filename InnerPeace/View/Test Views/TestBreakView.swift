@@ -9,13 +9,15 @@ import SwiftUI
 
 struct TestBreakView: View {
     
+    //MARK: Variable
     var subTitle: String
     var btnText: String
     
+    //MARK: Body
     var body: some View {
         VStack {
             Spacer()
-            LottieView(JSONFileName: "Logo").frame(width: 390, height: 238, alignment: .center)
+            LottieView(JSONFileName: "Logo", isLoop: false).frame(width: 390, height: 238, alignment: .center)
             //Title and Subtitle
             Spacer()
             VStack (alignment: .center, spacing: 20) {

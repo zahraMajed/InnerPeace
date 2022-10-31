@@ -17,7 +17,7 @@ struct SplashView: View {
     var body: some View {
         if isSplashActive {
             VStack{
-                LottieView(JSONFileName: "Logo").frame(width: 100, height: 100, alignment: .center)
+                LottieView(JSONFileName: "Logo", isLoop: false).frame(width: 100, height: 100, alignment: .center)
             }.onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.4) {
                     self.isSplashActive = false

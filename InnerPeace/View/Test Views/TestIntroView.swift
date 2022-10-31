@@ -23,8 +23,7 @@ struct TestIntroView: View {
                 .clipped()
                 .offset(x: 0, y: 100)*/
             
-            
-            LottieView(JSONFileName: "Logo").frame(width: 390, height: 238, alignment: .center).offset(x: 0, y: 80)
+            LottieView(JSONFileName: "Logo", isLoop: false).frame(width: 390, height: 238, alignment: .center).offset(x: 0, y: 80)
             
             //Title and Subtitle
             VStack (alignment: .center,spacing: 18) {

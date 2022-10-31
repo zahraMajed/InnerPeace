@@ -18,6 +18,10 @@
 		2B39E102290E628B004B4284 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B39E101290E628B004B4284 /* LottieView.swift */; };
 		2B39E108290E6E48004B4284 /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B39E107290E6E48004B4284 /* Logo.json */; };
 		2B819663290EC95700C5649B /* TestBreakView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B819662290EC95700C5649B /* TestBreakView2.swift */; };
+		2B81966C290FAD0800C5649B /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B81966B290FAD0800C5649B /* Loader.json */; };
+		2B81966E290FAD3A00C5649B /* SettingRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */; };
+		2B819671290FC9F100C5649B /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B819670290FC9F100C5649B /* RoutineView.swift */; };
+		2B819673290FCACB00C5649B /* Loader2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B819672290FCACB00C5649B /* Loader2.json */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		2B39E101290E628B004B4284 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		2B39E107290E6E48004B4284 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Logo.json; path = ../../../../Downloads/Logo.json; sourceTree = "<group>"; };
 		2B819662290EC95700C5649B /* TestBreakView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView2.swift; sourceTree = "<group>"; };
+		2B81966B290FAD0800C5649B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader.json; path = ../../../../Downloads/Loader.json; sourceTree = "<group>"; };
+		2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRoutineView.swift; sourceTree = "<group>"; };
+		2B819670290FC9F100C5649B /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		2B819672290FCACB00C5649B /* Loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader2.json; path = ../../../../Downloads/Loader2.json; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,10 +102,13 @@
 		2B39E0DF290A6070004B4284 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B39E101290E628B004B4284 /* LottieView.swift */,
-				2B39E107290E6E48004B4284 /* Logo.json */,
-				2B39E0F6290A8C35004B4284 /* Test Views */,
 				2B39E0EF290A8A9D004B4284 /* Onboarding Views */,
+				2B39E0F6290A8C35004B4284 /* Test Views */,
+				2B81966F290FC9C100C5649B /* Routine Views */,
+				2B39E101290E628B004B4284 /* LottieView.swift */,
+				2B81966B290FAD0800C5649B /* Loader.json */,
+				2B819672290FCACB00C5649B /* Loader2.json */,
+				2B39E107290E6E48004B4284 /* Logo.json */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,11 +126,52 @@
 		2B39E0F6290A8C35004B4284 /* Test Views */ = {
 			isa = PBXGroup;
 			children = (
-				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
+				2B819664290FA8CE00C5649B /* Break Views */,
+				2B819667290FA92A00C5649B /* Anxiety Test Views */,
+				2B819668290FA95400C5649B /* Depression Test Views */,
+				2B81966A290FA97C00C5649B /* Habits pregrences views */,
 				2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */,
+				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
 				2B819662290EC95700C5649B /* TestBreakView2.swift */,
+				2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */,
 			);
 			path = "Test Views";
+			sourceTree = "<group>";
+		};
+		2B819664290FA8CE00C5649B /* Break Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Break Views";
+			sourceTree = "<group>";
+		};
+		2B819667290FA92A00C5649B /* Anxiety Test Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Anxiety Test Views";
+			sourceTree = "<group>";
+		};
+		2B819668290FA95400C5649B /* Depression Test Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Depression Test Views";
+			sourceTree = "<group>";
+		};
+		2B81966A290FA97C00C5649B /* Habits pregrences views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Habits pregrences views";
+			sourceTree = "<group>";
+		};
+		2B81966F290FC9C100C5649B /* Routine Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B819670290FC9F100C5649B /* RoutineView.swift */,
+			);
+			path = "Routine Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B819673290FCACB00C5649B /* Loader2.json in Resources */,
 				2B39E0D8290A5D9A004B4284 /* Preview Assets.xcassets in Resources */,
 				2B39E0D5290A5D9A004B4284 /* Assets.xcassets in Resources */,
+				2B81966C290FAD0800C5649B /* Loader.json in Resources */,
 				2B39E108290E6E48004B4284 /* Logo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +258,9 @@
 				2B39E0F5290A8C0B004B4284 /* SplashView.swift in Sources */,
 				2B39E0F1290A8AC3004B4284 /* OnboardingViewT.swift in Sources */,
 				2B39E0F3290A8B69004B4284 /* OnboardingScreensView.swift in Sources */,
+				2B81966E290FAD3A00C5649B /* SettingRoutineView.swift in Sources */,
 				2B39E0F9290A8C5F004B4284 /* TestIntroView.swift in Sources */,
+				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
 				2B39E102290E628B004B4284 /* LottieView.swift in Sources */,
 			);
