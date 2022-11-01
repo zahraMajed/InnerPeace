@@ -18,26 +18,26 @@ struct AnxietyTestView1: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
+            Spacer()
            Text("Anxiety Test")
                 .font(.custom("Helvetica", size: 34))
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .frame(width: 353, height: 60, alignment: .leading)
-            Spacer()
  
- // Question
+ //Questions
             
             Text("Feeling nervous, anxious, or on edge")
                 .font(.custom("Helvetica", size: 22))
                 .fontWeight(.bold)
                 .frame(width: 361, height: 52.0, alignment: .leading)
+                .offset(x:10,y: 80)
             
-                Spacer()
-// Answer
-            VStack(spacing: 18){
+// Answers
+            VStack(spacing: 20){
               
-                ForEach(questionDic.sorted(by: >), id: \.key) { key, value in
+                ForEach(questionDic.sorted(by: >), id: \.key) {
+                    key, value in
                                         
                     NavigationLink {
                         AnxietyTestView2()
@@ -54,35 +54,30 @@ struct AnxietyTestView1: View {
                         print(score)
                     }
                 }
-            }.padding()
-            
-            Spacer()
+            }.padding().offset(x: 0, y:130)
+
             
  //ProgressPar
-            VStack {
-                
                 ZStack {
                     Text("1/7")
                         .font(.custom("Helvetica", size: 21))
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .frame(width: 361, height: 52.0, alignment: .leading)
+                        .offset(x:2,y: 100)
                     Path() { path in
-                        path.move(to: CGPoint(x: 20, y: 200))
-                        path.addLine(to: CGPoint(x: 370, y: 200))
+                        path.move(to: CGPoint(x: 20, y: 300))
+                        path.addLine(to: CGPoint(x: 370, y: 300))
                     }.stroke(Color("Gray"), lineWidth: 4)
                     
                     Path() { path in
-                        path.move(to: CGPoint(x: 20, y: 200))
-                        path.addLine(to: CGPoint(x: 70, y: 200))
+                        path.move(to: CGPoint(x: 20, y: 300))
+                        path.addLine(to: CGPoint(x: 70, y: 300))
                     }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
-        
                 }
-                
-            }//end of progress bar VStack
-        }
-        }
-    }
+            }//genral VStack
+        }//navigation
+    }//body
 }
 
 struct AnxietyTestView1_Previews: PreviewProvider {
