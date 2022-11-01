@@ -26,6 +26,7 @@
 		2B81967C2910FF2B00C5649B /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81967B2910FF2B00C5649B /* Collections */; };
 		2B81967E2910FF2B00C5649B /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81967D2910FF2B00C5649B /* DequeModule */; };
 		2B8196802910FF2B00C5649B /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81967F2910FF2B00C5649B /* OrderedCollections */; };
+		2B81968229110A5600C5649B /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968129110A5600C5649B /* ExercisesView.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		2B819670290FC9F100C5649B /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
 		2B819672290FCACB00C5649B /* Loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader2.json; sourceTree = "<group>"; };
 		2B81967829100D6800C5649B /* HabitsTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTestView1.swift; sourceTree = "<group>"; };
+		2B81968129110A5600C5649B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			children = (
 				2B819670290FC9F100C5649B /* RoutineView.swift */,
 				56B7F22C29100DFF00E9E870 /* MusicView.swift */,
+				2B81968129110A5600C5649B /* ExercisesView.swift */,
 			);
 			path = "Routine Views";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				2B39E0F9290A8C5F004B4284 /* TestIntroView.swift in Sources */,
 				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
+				2B81968229110A5600C5649B /* ExercisesView.swift in Sources */,
 				56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */,
 				2B39E102290E628B004B4284 /* LottieView.swift in Sources */,
 			);

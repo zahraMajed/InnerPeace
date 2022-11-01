@@ -135,7 +135,7 @@ struct RoutineView: View {
                         if routineList[index] == "Music" {
                             MusicView()
                         } else if routineList[index] == "Exercises" {
-                            //ExercisesView()
+                            ExercisesView()
                         }
                     }
                     .listRowSeparator(.hidden)
