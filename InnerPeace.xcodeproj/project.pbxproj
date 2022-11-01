@@ -30,6 +30,7 @@
 		2B8196842911180D00C5649B /* TestReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8196832911180D00C5649B /* TestReportView.swift */; };
 		2B81968729111B4F00C5649B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81968629111B4F00C5649B /* SwiftUICharts */; };
 		2B8196892911369C00C5649B /* AnxietyTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8196882911369C00C5649B /* AnxietyTestView1.swift */; };
+		2B81968D2911528D00C5649B /* AnxietyTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968C2911528D00C5649B /* AnxietyTestView2.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		2B81968129110A5600C5649B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		2B8196832911180D00C5649B /* TestReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReportView.swift; sourceTree = "<group>"; };
 		2B8196882911369C00C5649B /* AnxietyTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView1.swift; sourceTree = "<group>"; };
+		2B81968C2911528D00C5649B /* AnxietyTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView2.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				2B8196882911369C00C5649B /* AnxietyTestView1.swift */,
+				2B81968C2911528D00C5649B /* AnxietyTestView2.swift */,
 			);
 			path = "Anxiety Test Views";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B81968D2911528D00C5649B /* AnxietyTestView2.swift in Sources */,
 				2B39E0D1290A5D98004B4284 /* InnerPeaceApp.swift in Sources */,
 				2B819663290EC95700C5649B /* TestBreakView2.swift in Sources */,
 				2B39E0F5290A8C0B004B4284 /* SplashView.swift in Sources */,

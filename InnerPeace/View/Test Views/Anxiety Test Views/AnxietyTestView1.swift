@@ -8,103 +8,78 @@
 import SwiftUI
 
 struct AnxietyTestView1: View {
+    
+    let questionDic: [Int: String] = [0:"Not at all sure",
+                                      1:"Several days",
+                                      2:"Over half the days",
+                                      3:"Nearly every day"]
+    @State var score: Int = 0
+    
     var body: some View {
         NavigationView {
-            
-        VStack {
-            
-            HStack {
-                Text("Anxiety Test")
-                    .font(.custom("Helvetica", size: 34))
-                    .bold()
-                    .padding()
-
-                Spacer ()
-                
-            }
-            
+            VStack {
+                Spacer()
+           Text("Anxiety Test")
+                .font(.custom("Helvetica", size: 34))
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+                .frame(width: 353, height: 60, alignment: .leading)
             Spacer()
  
  // Question
+            
             Text("Feeling nervous, anxious, or on edge")
                 .font(.custom("Helvetica", size: 22))
-                .bold()
-                .padding()
+                .fontWeight(.bold)
+                .frame(width: 361, height: 52.0, alignment: .leading)
             
+                Spacer()
 // Answer
-            Button(action: {
-
-                 }) {
-                     Text("Not at all sure")
-                         .font(.custom("Helvetica", size: 21))
-                         .foregroundColor(.black)
-                         .frame(minWidth: 0, maxWidth: .infinity)
-                         .padding()
-                         .background(Color.white)
-                         .cornerRadius(25)
-                         .shadow(color: .blue, radius: 2, x: 0, y: 2)
-                         .padding()
-                 }
-            
-            Button(action: {
-
-                 }) {
-                     Text("Several days")
-                         .font(.custom("Helvetica", size: 21))
-                         .foregroundColor(.black)
-                         .frame(minWidth: 0, maxWidth: .infinity)
-                         .padding()
-                         .background(Color.white)
-                         .cornerRadius(25)
-                         .shadow(color: .blue, radius: 2, x: 0, y: 2)
-                         .padding()
-                 }
-            
-            Button(action: {
-
-                 }) {
-                     Text("Over half the days")
-                         .font(.custom("Helvetica", size: 21))
-                         .foregroundColor(.black)
-                         .frame(minWidth: 0, maxWidth: .infinity)
-                         .padding()
-                         .background(Color.white)
-                         .cornerRadius(25)
-                         .shadow(color: .blue, radius: 2, x: 0, y: 2)
-                         .padding()
-                 }
-            
-            Button(action: {
-
-                 }) {
-                     Text("Nearly every day")
-                         .font(.custom("Helvetica", size: 21))
-                         .foregroundColor(.black)
-                         .frame(minWidth: 0, maxWidth: .infinity)
-                         .padding()
-                         .background(Color.white)
-                         .cornerRadius(25)
-                         .shadow(color: .blue, radius: 2, x: 0, y: 2)
-                         .padding()
-                 }
+            VStack(spacing: 18){
+              
+                ForEach(questionDic.sorted(by: >), id: \.key) { key, value in
+                                        
+                    NavigationLink {
+                        AnxietyTestView2()
+                    } label: {
+                        Text("\(value)")
+                            .font(.custom("Helvetica", size: 21))
+                            .foregroundColor(Color.black)
+                            .frame(width: 346.0, height: 48.0)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2)
+                    }.onTapGesture {
+                        score += key
+                        print(score)
+                    }
+                }
+            }.padding()
             
             Spacer()
             
  //ProgressPar
-            
-
-            
- // NavigationLink
-            HStack {
-                Spacer ()
+            VStack {
                 
-                NavigationLink(destination: Text("Second View")) {
-                    Text("Next")
+                ZStack {
+                    Text("1/7")
+                        .font(.custom("Helvetica", size: 21))
+                        .fontWeight(.regular)
+                        .multilineTextAlignment(.leading)
+                        .frame(width: 361, height: 52.0, alignment: .leading)
+                    Path() { path in
+                        path.move(to: CGPoint(x: 20, y: 200))
+                        path.addLine(to: CGPoint(x: 370, y: 200))
+                    }.stroke(Color("Gray"), lineWidth: 4)
+                    
+                    Path() { path in
+                        path.move(to: CGPoint(x: 20, y: 200))
+                        path.addLine(to: CGPoint(x: 70, y: 200))
+                    }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
+        
                 }
-                .padding()
-            }
-
-            
+                
+            }//end of progress bar VStack
         }
         }
     }

@@ -30,7 +30,6 @@ struct RoutineView: View {
                     .font(.custom("Helvetica", size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
-                    .multilineTextAlignment(.center)
                     .frame(width: 353, height: 60, alignment: .leading)
                 Spacer()
                 ZStack{
@@ -69,11 +68,12 @@ struct RoutineView: View {
                             HStack(spacing: 27){
                                 ForEach(isChecked.values, id: \.self) { isChecked in
                                     Button {
-                                        
+                                        //isChecked.toggle()
                                     } label: {
                                         Image(systemName: isChecked ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
                                     }
                                 }
+                    
                                 
                                 /*Button {
                                  isChecked["Mon"]?.toggle()
@@ -149,7 +149,7 @@ struct RoutineView: View {
                         }
                     }.listRowSeparator(.hidden)
                 }.listStyle(.plain)
-            }//emd the general VStack
+            }//end the general VStack
         }//end navigation view
     }
     //MARK: Fuction
