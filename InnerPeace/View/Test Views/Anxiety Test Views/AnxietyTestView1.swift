@@ -17,6 +17,7 @@ struct AnxietyTestView1: View {
                 Text("Anxiety Test")
                     .font(.custom("Helvetica", size: 34))
                     .bold()
+                    .padding()
 
                 Spacer ()
                 
@@ -94,13 +95,17 @@ struct AnxietyTestView1: View {
 
             
  // NavigationLink
+            HStack {
+                Spacer ()
+                
                 NavigationLink(destination: Text("Second View")) {
                     Text("Next")
                 }
- 
+                .padding()
+            }
+
             
         }
-        .padding()
         }
     }
 }
