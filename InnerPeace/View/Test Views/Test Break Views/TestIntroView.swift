@@ -16,13 +16,6 @@ struct TestIntroView: View {
     var body: some View {
         VStack {
             
-            /*Image("OnBording2")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 390, height: 238)
-                .clipped()
-                .offset(x: 0, y: 100)*/
-            
             LottieView(JSONFileName: "Logo", isLoop: false).frame(width: 390, height: 238, alignment: .center).offset(x: 0, y: 80)
             
             //Title and Subtitle
@@ -48,20 +41,16 @@ struct TestIntroView: View {
                 VStack (spacing: 10){
                     ZStack {
                         HStack(spacing: 100){
-                            Circle()
-                                .frame(width: 32, height: 32)
-                            Circle()
-                                .frame(width: 32, height: 32)
-                            Circle()
-                                .frame(width: 32, height: 32)
+                            ForEach(1..<4) { num in
+                                Circle()
+                                    .frame(width: 32, height: 32)
+                            }
                         }.foregroundColor(Color("SecondaryColorGreyGreen"))
                         HStack(spacing: 121){
-                            Text("1")
-                                .font(.custom("Helvetica", size: 21))
-                            Text("2")
-                                .font(.custom("Helvetica", size: 21))
-                            Text("3")
-                                .font(.custom("Helvetica", size: 21))
+                            ForEach(1..<4) { num in
+                                Text("\(num)")
+                                    .font(.custom("Helvetica", size: 21))
+                            }
                         }
                         .foregroundColor(.white)
                     }
