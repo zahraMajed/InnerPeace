@@ -11,7 +11,8 @@ import SwiftUI
 struct InnerPeaceApp: App {
     var body: some Scene {
         WindowGroup {
-            SettingRoutineView()
+            SplashView()
+                .tint(Color("SecondaryColorGreyGreen"))
         }
     }
 }
