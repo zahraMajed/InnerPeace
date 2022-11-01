@@ -27,6 +27,8 @@
 		2B81967E2910FF2B00C5649B /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81967D2910FF2B00C5649B /* DequeModule */; };
 		2B8196802910FF2B00C5649B /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81967F2910FF2B00C5649B /* OrderedCollections */; };
 		2B81968229110A5600C5649B /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968129110A5600C5649B /* ExercisesView.swift */; };
+		2B8196842911180D00C5649B /* TestReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8196832911180D00C5649B /* TestReportView.swift */; };
+		2B81968729111B4F00C5649B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81968629111B4F00C5649B /* SwiftUICharts */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,7 @@
 		2B819672290FCACB00C5649B /* Loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader2.json; sourceTree = "<group>"; };
 		2B81967829100D6800C5649B /* HabitsTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTestView1.swift; sourceTree = "<group>"; };
 		2B81968129110A5600C5649B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		2B8196832911180D00C5649B /* TestReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReportView.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +65,7 @@
 				2B39E0FC290E5F9E004B4284 /* Lottie in Frameworks */,
 				2B8196802910FF2B00C5649B /* OrderedCollections in Frameworks */,
 				2B81967E2910FF2B00C5649B /* DequeModule in Frameworks */,
+				2B81968729111B4F00C5649B /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,7 @@
 				2B81967529100AE300C5649B /* Anxiety Test Views */,
 				2B81967629100AEE00C5649B /* Depression Test Views */,
 				2B81967729100B0000C5649B /* Habits Prefrences Views */,
+				2B8196832911180D00C5649B /* TestReportView.swift */,
 			);
 			path = "Test Views";
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				2B81967B2910FF2B00C5649B /* Collections */,
 				2B81967D2910FF2B00C5649B /* DequeModule */,
 				2B81967F2910FF2B00C5649B /* OrderedCollections */,
+				2B81968629111B4F00C5649B /* SwiftUICharts */,
 			);
 			productName = InnerPeace;
 			productReference = 2B39E0CD290A5D98004B4284 /* InnerPeace.app */;
@@ -242,6 +248,7 @@
 			packageReferences = (
 				2B39E0FA290E5F9E004B4284 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2B81967A2910FF2B00C5649B /* XCRemoteSwiftPackageReference "swift-collections" */,
+				2B81968529111B4F00C5649B /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 2B39E0CE290A5D98004B4284 /* Products */;
 			projectDirPath = "";
@@ -282,6 +289,7 @@
 				2B39E0F9290A8C5F004B4284 /* TestIntroView.swift in Sources */,
 				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
+				2B8196842911180D00C5649B /* TestReportView.swift in Sources */,
 				2B81968229110A5600C5649B /* ExercisesView.swift in Sources */,
 				56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */,
 				2B39E102290E628B004B4284 /* LottieView.swift in Sources */,
@@ -503,6 +511,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		2B81968529111B4F00C5649B /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -525,6 +541,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B81967A2910FF2B00C5649B /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
+		};
+		2B81968629111B4F00C5649B /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B81968529111B4F00C5649B /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,7 +9,7 @@ import SwiftUI
 import Collections
 
 struct RoutineView: View {
-    // i have problem only with ischeckdBtn and nav bar styling
+    // i have problem only with isCheckdBtn and nav bar styling
     //MARK: Variable
     let routineList = ["Exercises", "Meditation", "Music", "Journaling"]
     @State private var isChecked: OrderedDictionary = [
@@ -140,6 +140,8 @@ struct RoutineView: View {
                             }
                         } label: {
                             Text("\(routineList[index])")
+                                .font(.custom("Helvetica", size: 21))
+                                .fontWeight(.regular)
                                 .frame(width: 346.0, height: 48.0)
                                 .background(RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color("PrimaryColorB"), lineWidth: 1)
