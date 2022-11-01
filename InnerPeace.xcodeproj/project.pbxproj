@@ -29,6 +29,7 @@
 		2B81968229110A5600C5649B /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968129110A5600C5649B /* ExercisesView.swift */; };
 		2B8196842911180D00C5649B /* TestReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8196832911180D00C5649B /* TestReportView.swift */; };
 		2B81968729111B4F00C5649B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81968629111B4F00C5649B /* SwiftUICharts */; };
+		2B8196892911369C00C5649B /* AnxietyTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8196882911369C00C5649B /* AnxietyTestView1.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		2B81967829100D6800C5649B /* HabitsTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTestView1.swift; sourceTree = "<group>"; };
 		2B81968129110A5600C5649B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		2B8196832911180D00C5649B /* TestReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReportView.swift; sourceTree = "<group>"; };
+		2B8196882911369C00C5649B /* AnxietyTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView1.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 		2B81967529100AE300C5649B /* Anxiety Test Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B8196882911369C00C5649B /* AnxietyTestView1.swift */,
 			);
 			path = "Anxiety Test Views";
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
 				2B8196842911180D00C5649B /* TestReportView.swift in Sources */,
+				2B8196892911369C00C5649B /* AnxietyTestView1.swift in Sources */,
 				2B81968229110A5600C5649B /* ExercisesView.swift in Sources */,
 				56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */,
 				2B39E102290E628B004B4284 /* LottieView.swift in Sources */,
