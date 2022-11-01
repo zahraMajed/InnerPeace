@@ -38,7 +38,6 @@ struct AnxietyTestView1: View {
               
                 ForEach(questionDic.sorted(by: >), id: \.key) {
                     key, value in
-                                        
                     NavigationLink {
                         AnxietyTestView2()
                     } label: {

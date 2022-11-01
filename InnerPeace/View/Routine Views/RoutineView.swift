@@ -9,7 +9,7 @@ import SwiftUI
 import Collections
 
 struct RoutineView: View {
-    // i have problem only with isCheckdBtn and nav bar styling
+    
     //MARK: Variable
     let routineList = ["Exercises", "Meditation", "Music", "Journaling"]
     @State private var isChecked: OrderedDictionary = [
@@ -30,6 +30,7 @@ struct RoutineView: View {
                     .font(.custom("Helvetica", size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
+                    .multilineTextAlignment(.center)
                     .frame(width: 353, height: 60, alignment: .leading)
                 Spacer()
                 ZStack{
@@ -149,7 +150,7 @@ struct RoutineView: View {
                         }
                     }.listRowSeparator(.hidden)
                 }.listStyle(.plain)
-            }//end the general VStack
+            }//emd the general VStack
         }//end navigation view
     }
     //MARK: Fuction
