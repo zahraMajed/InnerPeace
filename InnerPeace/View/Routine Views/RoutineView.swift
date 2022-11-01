@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Collections
 
 struct RoutineView: View {
     //MARK: Variable
     var welcomeMsg: String = ""
     let routineList = ["Exercises", "Meditation", "Music", "Journaling"]
-    @State private var isChecked: [String:Bool] = [
+    @State private var isChecked: OrderedDictionary = [
         "Mon": false,
         "Tue": false,
         "Wed": false,
@@ -56,37 +57,24 @@ struct RoutineView: View {
                     
                     VStack (spacing: 10){
                         HStack(spacing: 18){
-                            Text("Mon")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Tue")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Wed")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Thu")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Fri")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Sat")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
-                            Text("Sun")
-                                .font(.custom("Helvetica", size: 18))
-                                .fontWeight(.regular)
-                                .foregroundColor(Color.black)
+                            ForEach(isChecked.keys, id: \.self) {
+                                Text("\($0)")
+                                    .font(.custom("Helvetica", size: 18))
+                                    .fontWeight(.regular)
+                                    .foregroundColor(Color.black)
+                            }
+                            
                         }
                         HStack(spacing: 27){
-                            Button {
+                            ForEach(isChecked.values, id: \.self) { isChecked in
+                                Button {
+                                    
+                                } label: {
+                                    Image(systemName: isChecked ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
+                                }
+                            }
+                            
+                            /*Button {
                                 isChecked["Mon"]?.toggle()
                             } label: {
                                 Image(systemName: isChecked["Mon"]! ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
@@ -126,7 +114,7 @@ struct RoutineView: View {
                                 isChecked["Sun"]?.toggle()
                             } label: {
                                 Image(systemName: isChecked["Sun"]! ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
-                            }
+                            }*/
                         }
                     }//end progress VStack
                     Spacer()
@@ -144,7 +132,11 @@ struct RoutineView: View {
             List {
                 ForEach(0..<routineList.count) { index in
                     Button("\(routineList[index])") {
-                        
+                        if routineList[index] == "Music" {
+                            MusicView()
+                        } else if routineList[index] == "Exercises" {
+                            //ExercisesView()
+                        }
                     }
                     .listRowSeparator(.hidden)
                     .frame(width: 346.0, height: 48.0)
