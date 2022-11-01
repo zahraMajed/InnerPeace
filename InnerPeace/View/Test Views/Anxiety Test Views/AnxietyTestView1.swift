@@ -9,33 +9,29 @@ import SwiftUI
 
 struct AnxietyTestView1: View {
     
-    let questionDic: [Int: String] = [0:"Not at all sure",
-                                      1:"Several days",
-                                      2:"Over half the days",
-                                      3:"Nearly every day"]
+
     @StateObject var anxietySettingObj = AnxietySettings()
 
     var body: some View {
         NavigationView {
             VStack {
             Spacer()
-           Text("Anxiety Test")
+                Text("Anxiety Test")
                 .font(.custom("Helvetica", size: 34))
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .frame(width: 353, height: 60, alignment: .leading)
  
  //Questions
-            
-            Text("Feeling nervous, anxious, or on edge")
+                Text("Feeling nervous, anxious, or on edge")
                 .font(.custom("Helvetica", size: 22))
                 .fontWeight(.bold)
                 .frame(width: 361, height: 52.0, alignment: .leading)
                 .offset(x:10,y: 80)
             
 // Answers
-            VStack(spacing: 20){
-              ForEach(questionDic.sorted(by: >), id: \.key) {
+                VStack(spacing: 20){
+                ForEach(anxietySettingObj.questionDic.sorted(by: >), id: \.key) {
                     key, value in
                     NavigationLink {
                         AnxietyTestView2()
@@ -75,13 +71,6 @@ struct AnxietyTestView1: View {
             }//genral VStack
         }.environmentObject(anxietySettingObj)
     }//body
-}
-
-struct ScaleButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 2 : 1)
-    }
 }
 
 struct AnxietyTestView1_Previews: PreviewProvider {
