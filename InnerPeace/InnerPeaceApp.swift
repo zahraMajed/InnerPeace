@@ -11,7 +11,7 @@ import SwiftUI
 struct InnerPeaceApp: App {
     var body: some Scene {
         WindowGroup {
-            TestReportView()
+            AnxietyTestView1()
                 .tint(Color("SecondaryColorGreyGreen"))
         }
     }
