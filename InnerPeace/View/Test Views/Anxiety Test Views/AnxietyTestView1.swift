@@ -13,8 +13,8 @@ struct AnxietyTestView1: View {
                                       1:"Several days",
                                       2:"Over half the days",
                                       3:"Nearly every day"]
-    @State var score: Int = 0
-    
+    @StateObject var anxietySettingObj = AnxietySettings()
+
     var body: some View {
         NavigationView {
             VStack {
@@ -35,8 +35,7 @@ struct AnxietyTestView1: View {
             
 // Answers
             VStack(spacing: 20){
-              
-                ForEach(questionDic.sorted(by: >), id: \.key) {
+              ForEach(questionDic.sorted(by: >), id: \.key) {
                     key, value in
                     NavigationLink {
                         AnxietyTestView2()
@@ -48,14 +47,13 @@ struct AnxietyTestView1: View {
                             .background(Color.white)
                             .cornerRadius(8)
                             .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2)
-                    }.onTapGesture {
-                        score += key
-                        print(score)
-                    }
-                }
+                    }.simultaneousGesture(TapGesture().onEnded{
+                        anxietySettingObj.score += key
+                        print(anxietySettingObj.score)
+                    })
+                }//foreach
             }.padding().offset(x: 0, y:130)
 
-            
  //ProgressPar
                 ZStack {
                     Text("1/7")
@@ -75,8 +73,15 @@ struct AnxietyTestView1: View {
                     }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
                 }
             }//genral VStack
-        }//navigation
+        }.environmentObject(anxietySettingObj)
     }//body
+}
+
+struct ScaleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 2 : 1)
+    }
 }
 
 struct AnxietyTestView1_Previews: PreviewProvider {
