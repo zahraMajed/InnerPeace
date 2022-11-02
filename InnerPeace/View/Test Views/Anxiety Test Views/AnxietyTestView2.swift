@@ -90,6 +90,10 @@ struct AnxietyTestView2<Content: View>: View {
 
 struct AnxietyTestView2_Previews: PreviewProvider {
     static var previews: some View {
-        AnxietyTestView2(testQuestion: "Not being able to stop or control worrying ?", progressValue: 105, testNum: "2/7", secondViewToNav: AnxietyTestView3())
+        AnxietyTestView2(
+            testQuestion: "Not being able to stop or control worrying ?"
+            , progressValue: 105
+            , testNum: "2/7"
+            , secondViewToNav: AnxietyTestView3())
     }
 }

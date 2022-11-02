@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct InnerPeaceApp: App {
+    init(){
+        UINavigationBar.appearance().tintColor = UIColor(named: "SecondaryColorGreyGreen")
+    }
     var body: some Scene {
         WindowGroup {
-            NewHabitsView()
+            AnxietyTestView1()
                 .tint(Color("SecondaryColorGreyGreen"))
         }
     }

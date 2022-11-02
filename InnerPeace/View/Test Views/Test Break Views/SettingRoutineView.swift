@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingRoutineView: View {
+    
     @State private var hasTime1Elapsed = false
     @State private var hasTime2Elapsed = false
     @State private var hasTime3Elapsed = false
@@ -90,14 +91,6 @@ struct SettingRoutineView: View {
         }
 
     }
-    
-    //MARK: Function
-    /*func delayTextColor(text: Text, textcolor: Color){
-        DispatchQueue.main.asyncAfter(deadline: .now() + colorTime) {
-            text.foregroundColor(textcolor)
-        }
-        colorTime += 1.5
-    }*/
 }
 
 struct SettingRoutineView_Previews: PreviewProvider {

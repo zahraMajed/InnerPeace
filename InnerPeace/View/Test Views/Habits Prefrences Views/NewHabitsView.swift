@@ -11,6 +11,7 @@ struct NewHabitsView: View {
     //MARK: Variable
     @State var newHabitList = ["Exercises", "Meditation", "Painting", "Music", "Journaling", "Naturalise"]
     @State private var showNextScreen = false
+    
     //MARK: Body
     var body: some View {
         NavigationView {
