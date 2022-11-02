@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftUICharts
 
 struct TestReportView: View {
+    @EnvironmentObject var anxietySettingObj : AnxietySettings
     
     //MARK: Variables
     let chartStyle = ChartStyle(backgroundColor: .white, accentColor: Color("SecondaryColorGreyGreen"), secondGradientColor: Color("SecondaryColorBeige"), textColor: .black, legendTextColor: .black, dropShadowColor: .white)
@@ -17,7 +18,7 @@ struct TestReportView: View {
     var body: some View {
         VStack {
             Spacer()
-            BarChartView(data: ChartData(values: [("Anxiety", 80), ("Depression", 50)]), title: "", style: chartStyle, form: CGSize(width: 300, height: 300), animatedToBack: true)
+            BarChartView(data: ChartData(values: [("Anxiety", anxietySettingObj.score), ("Depression", 50)]), title: "", style: chartStyle, form: CGSize(width: 300, height: 300), animatedToBack: true)
                 .padding(.leading, 45.0)
             
             Spacer()
@@ -69,6 +70,6 @@ struct TestReportView: View {
 
 struct TestReportView_Previews: PreviewProvider {
     static var previews: some View {
-        TestReportView()
+        TestReportView().environmentObject(AnxietySettings())
     }
 }
