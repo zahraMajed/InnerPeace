@@ -17,7 +17,6 @@
 		2B39E0FC290E5F9E004B4284 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2B39E0FB290E5F9E004B4284 /* Lottie */; };
 		2B39E102290E628B004B4284 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B39E101290E628B004B4284 /* LottieView.swift */; };
 		2B39E108290E6E48004B4284 /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B39E107290E6E48004B4284 /* Logo.json */; };
-		2B819663290EC95700C5649B /* TestBreakView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B819662290EC95700C5649B /* TestBreakView2.swift */; };
 		2B81966C290FAD0800C5649B /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B81966B290FAD0800C5649B /* Loader.json */; };
 		2B81966E290FAD3A00C5649B /* SettingRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */; };
 		2B819671290FC9F100C5649B /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B819670290FC9F100C5649B /* RoutineView.swift */; };
@@ -34,6 +33,8 @@
 		2B81968F2911A74700C5649B /* TestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968E2911A74700C5649B /* TestClasses.swift */; };
 		2BDA31B1291249BF002BDE6C /* AnxietyTestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B0291249BF002BDE6C /* AnxietyTestView3.swift */; };
 		2BDA31B5291286D0002BDE6C /* DepressionTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */; };
+		2BDA31B729128DDF002BDE6C /* DepressionTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B629128DDF002BDE6C /* DepressionTestView2.swift */; };
+		2BDA31B929129032002BDE6C /* DepressionTestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B829129032002BDE6C /* DepressionTestView3.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +50,6 @@
 		2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntroView.swift; sourceTree = "<group>"; };
 		2B39E101290E628B004B4284 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		2B39E107290E6E48004B4284 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
-		2B819662290EC95700C5649B /* TestBreakView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView2.swift; sourceTree = "<group>"; };
 		2B81966B290FAD0800C5649B /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
 		2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRoutineView.swift; sourceTree = "<group>"; };
 		2B819670290FC9F100C5649B /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		2B81968E2911A74700C5649B /* TestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClasses.swift; sourceTree = "<group>"; };
 		2BDA31B0291249BF002BDE6C /* AnxietyTestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView3.swift; sourceTree = "<group>"; };
 		2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressionTestView1.swift; sourceTree = "<group>"; };
+		2BDA31B629128DDF002BDE6C /* DepressionTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressionTestView2.swift; sourceTree = "<group>"; };
+		2BDA31B829129032002BDE6C /* DepressionTestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressionTestView3.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +178,6 @@
 			children = (
 				2B39E0F8290A8C5F004B4284 /* TestIntroView.swift */,
 				2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */,
-				2B819662290EC95700C5649B /* TestBreakView2.swift */,
 				2B81966D290FAD3A00C5649B /* SettingRoutineView.swift */,
 			);
 			path = "Test Break Views";
@@ -197,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */,
+				2BDA31B629128DDF002BDE6C /* DepressionTestView2.swift */,
+				2BDA31B829129032002BDE6C /* DepressionTestView3.swift */,
 			);
 			path = "Depression Test Views";
 			sourceTree = "<group>";
@@ -294,10 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDA31B929129032002BDE6C /* DepressionTestView3.swift in Sources */,
 				2B81968D2911528D00C5649B /* AnxietyTestView2.swift in Sources */,
+				2BDA31B729128DDF002BDE6C /* DepressionTestView2.swift in Sources */,
 				2B39E0D1290A5D98004B4284 /* InnerPeaceApp.swift in Sources */,
 				2B81968F2911A74700C5649B /* TestClasses.swift in Sources */,
-				2B819663290EC95700C5649B /* TestBreakView2.swift in Sources */,
 				2B39E0F5290A8C0B004B4284 /* SplashView.swift in Sources */,
 				2B39E0F1290A8AC3004B4284 /* OnboardingViewT.swift in Sources */,
 				2B39E0F3290A8B69004B4284 /* OnboardingScreensView.swift in Sources */,

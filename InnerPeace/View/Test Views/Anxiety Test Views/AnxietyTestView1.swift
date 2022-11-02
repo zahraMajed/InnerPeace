@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct AnxietyTestView1: View {
-    
-
+    //MARK: Variable
     @StateObject var anxietySettingObj = AnxietySettings()
-
+    
+    //MARK: Body
     var body: some View {
         NavigationView {
             VStack {
@@ -26,7 +26,8 @@ struct AnxietyTestView1: View {
                 Text("Feeling nervous, anxious, or on edge")
                 .font(.custom("Helvetica", size: 22))
                 .fontWeight(.bold)
-                .frame(width: 361, height: 52.0, alignment: .leading)
+                .frame(width: 346, alignment: .leading)
+                .frame(maxWidth: .infinity)
                 .offset(x:10,y: 80)
             
 // Answers
@@ -57,15 +58,15 @@ struct AnxietyTestView1: View {
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .frame(width: 361, height: 52.0, alignment: .leading)
-                        .offset(x:2,y: 100)
+                        .offset(x:2,y: 50)
                     Path() { path in
-                        path.move(to: CGPoint(x: 20, y: 300))
-                        path.addLine(to: CGPoint(x: 370, y: 300))
+                        path.move(to: CGPoint(x: 20, y: 250))
+                        path.addLine(to: CGPoint(x: 370, y: 250))
                     }.stroke(Color("Gray"), lineWidth: 4)
                     
                     Path() { path in
-                        path.move(to: CGPoint(x: 20, y: 300))
-                        path.addLine(to: CGPoint(x: 52, y: 300))
+                        path.move(to: CGPoint(x: 20, y: 250))
+                        path.addLine(to: CGPoint(x: 52, y: 250))
                     }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
                 }
             }//genral VStack

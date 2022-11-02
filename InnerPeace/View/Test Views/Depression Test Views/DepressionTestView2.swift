@@ -1,37 +1,37 @@
 //
-//  AnxietyTestView2.swift
+//  DepressionTestView2.swift
 //  InnerPeace
 //
-//  Created by Zahra Majed Alzawad on 07/04/1444 AH.
+//  Created by Zahra Majed Alzawad on 08/04/1444 AH.
 //
 
 import SwiftUI
 
-struct AnxietyTestView2<Content: View>: View {
+struct DepressionTestView2<Content: View>: View {
     //MARK: Variable
-    @EnvironmentObject var anxietySettingObj : AnxietySettings
-    let answersDic: [Int: String] = [0:"Not at all sure",
-                                      1:"Several days",
-                                      2:"Over half the days",
-                                      3:"Nearly every day"]
+    @EnvironmentObject var depressionSettingObj : DepressionSettings
+    let answersDic: [Int: String] = [0:"Not at all",
+                                      1:"A little",
+                                      2:"Somewhat",
+                                      3:"Much"]
     /*let questionsArray = [
-        "Not being able to stop or control worrying ?",
-        "Worrying too much about different things ?",
-        "Trouble relaxing ?",
-        "Being so restless that it's hard to sit still ?",
-        "Becoming easily annoyed or Irritable ?",
-        "Becoming easily annoyed or Irritable ?"]*/
+        "Trouble falling or staying asleep, or sleeping too much",
+        "Feeling tired or having little energy",
+        "Poor appetite or overeating",
+        "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
+        "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "Moving or speaking so slowly that other people could have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual",
+     "Thoughts that you would be better off dead, or of hurting yourself"]*/
     
     let testQuestion: String
     let progressValue: Int
     let testNum: String
     let secondViewToNav: Content
     
-    //MARK: Body
     var body: some View {
         VStack {
         Spacer()
-            Text("Anxiety Test")
+            Text("Depression Test")
             .font(.custom("Helvetica", size: 34))
             .fontWeight(.bold)
             .foregroundColor(Color.black)
@@ -60,8 +60,8 @@ struct AnxietyTestView2<Content: View>: View {
                         .cornerRadius(8)
                         .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2)
                 }.simultaneousGesture(TapGesture().onEnded{
-                    anxietySettingObj.score += key
-                    print("The updated score in view: \(anxietySettingObj.score)")
+                    depressionSettingObj.score += key
+                    print("The updated score in view: \(depressionSettingObj.score)")
                 })
             }//foreach
         }.padding().offset(x: 0, y:130)
@@ -88,8 +88,8 @@ struct AnxietyTestView2<Content: View>: View {
     }
 }
 
-struct AnxietyTestView2_Previews: PreviewProvider {
+struct DepressionTestView2_Previews: PreviewProvider {
     static var previews: some View {
-        AnxietyTestView2(testQuestion: "Not being able to stop or control worrying ?", progressValue: 105, testNum: "2/7", secondViewToNav: AnxietyTestView3())
+        DepressionTestView2(testQuestion: "Feeling down, depressed, or hopeless" , progressValue: 80, testNum: "2/9", secondViewToNav: DepressionTestView3())
     }
 }

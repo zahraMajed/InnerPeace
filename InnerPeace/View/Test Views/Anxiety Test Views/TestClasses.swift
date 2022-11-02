@@ -16,5 +16,9 @@ class AnxietySettings: ObservableObject {
 }
 
 class DepressionSettings: ObservableObject {
+    let answersDic: [Int: String] = [0:"Not at all",
+                                      1:"A little",
+                                      2:"Somewhat",
+                                      3:"Much"]
     @Published var score = 0
 }
