@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct TestBreakView: View {
+struct TestBreakView<Content: View>: View {
     
     //MARK: Variable
     var subTitle: String
     var btnText: String
+    let secondViewToNav: Content
+    @State private var showNextScreen = false
     
     //MARK: Body
     var body: some View {
@@ -33,12 +35,15 @@ struct TestBreakView: View {
             //Button
             Spacer()
             Button(btnText) {
-                
+                showNextScreen = true
             }
             .frame(width: 327, height: 41)
             .background(Color("PrimaryColorB"))
             .foregroundColor(.white)
             .cornerRadius(10)
+            .fullScreenCover(isPresented: $showNextScreen) {
+                secondViewToNav
+            }
             Spacer()
         }
     }
@@ -46,6 +51,6 @@ struct TestBreakView: View {
 
 struct TestBreakViewT_Previews: PreviewProvider {
     static var previews: some View {
-        TestBreakView(subTitle: "To help you build new habits in a wellness routine! Here is our journey", btnText: "Start Depression test" )
+        TestBreakView(subTitle: "Anxiety and depression are linked!", btnText: "Start Depression test", secondViewToNav: DepressionTestView1())
     }
 }

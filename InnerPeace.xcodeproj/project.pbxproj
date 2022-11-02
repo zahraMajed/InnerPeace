@@ -33,6 +33,7 @@
 		2B81968D2911528D00C5649B /* AnxietyTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968C2911528D00C5649B /* AnxietyTestView2.swift */; };
 		2B81968F2911A74700C5649B /* TestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81968E2911A74700C5649B /* TestClasses.swift */; };
 		2BDA31B1291249BF002BDE6C /* AnxietyTestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B0291249BF002BDE6C /* AnxietyTestView3.swift */; };
+		2BDA31B5291286D0002BDE6C /* DepressionTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		2B81968C2911528D00C5649B /* AnxietyTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView2.swift; sourceTree = "<group>"; };
 		2B81968E2911A74700C5649B /* TestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClasses.swift; sourceTree = "<group>"; };
 		2BDA31B0291249BF002BDE6C /* AnxietyTestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyTestView3.swift; sourceTree = "<group>"; };
+		2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressionTestView1.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 		2B81967629100AEE00C5649B /* Depression Test Views */ = {
 			isa = PBXGroup;
 			children = (
+				2BDA31B4291286D0002BDE6C /* DepressionTestView1.swift */,
 			);
 			path = "Depression Test Views";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				2B39E0F9290A8C5F004B4284 /* TestIntroView.swift in Sources */,
 				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
+				2BDA31B5291286D0002BDE6C /* DepressionTestView1.swift in Sources */,
 				2B8196842911180D00C5649B /* TestReportView.swift in Sources */,
 				2B8196892911369C00C5649B /* AnxietyTestView1.swift in Sources */,
 				2B81968229110A5600C5649B /* ExercisesView.swift in Sources */,

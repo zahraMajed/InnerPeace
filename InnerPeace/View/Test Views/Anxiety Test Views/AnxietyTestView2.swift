@@ -13,13 +13,13 @@ struct AnxietyTestView2<Content: View>: View {
                                       1:"Several days",
                                       2:"Over half the days",
                                       3:"Nearly every day"]
-    let questionsArray = [
+    /*let questionsArray = [
         "Not being able to stop or control worrying ?",
         "Worrying too much about different things ?",
         "Trouble relaxing ?",
         "Being so restless that it's hard to sit still ?",
         "Becoming easily annoyed or Irritable ?",
-        "Becoming easily annoyed or Irritable ?"]
+        "Becoming easily annoyed or Irritable ?"]*/
     
     let testQuestion: String
     let progressValue: Int
