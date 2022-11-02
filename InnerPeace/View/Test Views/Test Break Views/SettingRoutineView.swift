@@ -14,15 +14,11 @@ struct SettingRoutineView: View {
     @State private var hasTime4Elapsed = false
     @State private var isSettingRoutineActive = true
     
-    /*let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-    @State private var hasTimeElapsed = false
-    let colorTime: Double*/
-    
     var body: some View {
         if isSettingRoutineActive {
             VStack {
                 Spacer()
-                //LottieView(JSONFileName: "Loader", isLoop: true).frame(width: 390, height: 238, alignment: .center)
+                
                 LottieView(JSONFileName: "Loader2", isLoop: false).frame(width: 390, height: 238, alignment: .center)
                 Spacer()
                 VStack (alignment: .center, spacing: 40) {
@@ -90,7 +86,7 @@ struct SettingRoutineView: View {
                 }
             }
         }else {
-            RoutineView()
+            TestReportView()
         }
 
     }

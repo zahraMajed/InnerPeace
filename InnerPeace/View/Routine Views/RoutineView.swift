@@ -30,7 +30,6 @@ struct RoutineView: View {
                     .font(.custom("Helvetica", size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
-                    .multilineTextAlignment(.center)
                     .frame(width: 353, height: 60, alignment: .leading)
                 Spacer()
                 ZStack{
@@ -67,16 +66,16 @@ struct RoutineView: View {
                                 
                             }
                             HStack(spacing: 27){
-                                ForEach(isChecked.values, id: \.self) { isChecked in
+                                /*ForEach(isChecked.values, id: \.self) { isChecked in
                                     Button {
                                         //isChecked.toggle()
                                     } label: {
                                         Image(systemName: isChecked ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
                                     }
-                                }
+                                }*/
                     
                                 
-                                /*Button {
+                                Button {
                                  isChecked["Mon"]?.toggle()
                                  } label: {
                                  Image(systemName: isChecked["Mon"]! ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
@@ -116,7 +115,7 @@ struct RoutineView: View {
                                  isChecked["Sun"]?.toggle()
                                  } label: {
                                  Image(systemName: isChecked["Sun"]! ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
-                                 }*/
+                                 }
                             }
                         }//end progress VStack
                         Spacer()

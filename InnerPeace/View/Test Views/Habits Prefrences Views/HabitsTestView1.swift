@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HabitsTestView1: View {
+    //MARK: Variable
+    
+    //MARK: Body
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
