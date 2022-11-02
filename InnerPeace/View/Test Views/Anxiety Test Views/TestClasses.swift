@@ -9,7 +9,7 @@ import Foundation
 
 class AnxietySettings: ObservableObject {
     @Published var score = 0
-    let questionDic: [Int: String] = [0:"Not at all sure",
+    let answersDic: [Int: String] = [0:"Not at all sure",
                                       1:"Several days",
                                       2:"Over half the days",
                                       3:"Nearly every day"]

@@ -31,10 +31,10 @@ struct AnxietyTestView1: View {
             
 // Answers
                 VStack(spacing: 20){
-                ForEach(anxietySettingObj.questionDic.sorted(by: >), id: \.key) {
+                ForEach(anxietySettingObj.answersDic.sorted(by: >), id: \.key) {
                     key, value in
                     NavigationLink {
-                        AnxietyTestView2()
+                        AnxietyTestView2(testQuestion: "Not being able to stop or control worrying ?", progressValue: 105, testNum: "2/7", secondViewToNav: AnxietyTestView3())
                     } label: {
                         Text("\(value)")
                             .font(.custom("Helvetica", size: 21))
@@ -65,7 +65,7 @@ struct AnxietyTestView1: View {
                     
                     Path() { path in
                         path.move(to: CGPoint(x: 20, y: 300))
-                        path.addLine(to: CGPoint(x: 70, y: 300))
+                        path.addLine(to: CGPoint(x: 52, y: 300))
                     }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
                 }
             }//genral VStack

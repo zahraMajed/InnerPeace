@@ -7,13 +7,24 @@
 
 import SwiftUI
 
-struct AnxietyTestView2: View {
+struct AnxietyTestView2<Content: View>: View {
     @EnvironmentObject var anxietySettingObj : AnxietySettings
-    
-    let questionDic: [Int: String] = [0:"Not at all sure",
+    let answersDic: [Int: String] = [0:"Not at all sure",
                                       1:"Several days",
                                       2:"Over half the days",
                                       3:"Nearly every day"]
+    let questionsArray = [
+        "Not being able to stop or control worrying ?",
+        "Worrying too much about different things ?",
+        "Trouble relaxing ?",
+        "Being so restless that it's hard to sit still ?",
+        "Becoming easily annoyed or Irritable ?",
+        "Becoming easily annoyed or Irritable ?"]
+    
+    let testQuestion: String
+    let progressValue: Int
+    let testNum: String
+    let secondViewToNav: Content
     
     var body: some View {
         VStack {
@@ -25,7 +36,7 @@ struct AnxietyTestView2: View {
             .frame(width: 353, height: 60, alignment: .leading)
 
 //Questions
-            Text("Feeling nervous, anxious, or on edge")
+            Text(testQuestion)
             .font(.custom("Helvetica", size: 22))
             .fontWeight(.bold)
             .frame(width: 361, height: 52.0, alignment: .leading)
@@ -33,10 +44,10 @@ struct AnxietyTestView2: View {
         
 // Answers
             VStack(spacing: 20){
-            ForEach(questionDic.sorted(by: >), id: \.key) {
+            ForEach(answersDic.sorted(by: >), id: \.key) {
                 key, value in
                 NavigationLink {
-                    AnxietyTestView3()
+                    secondViewToNav
                 } label: {
                     Text("\(value)")
                         .font(.custom("Helvetica", size: 21))
@@ -47,14 +58,14 @@ struct AnxietyTestView2: View {
                         .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2)
                 }.simultaneousGesture(TapGesture().onEnded{
                     anxietySettingObj.score += key
-                    print("The updated score in view 2 : \(anxietySettingObj.score)")
+                    print("The updated score in view: \(anxietySettingObj.score)")
                 })
             }//foreach
         }.padding().offset(x: 0, y:130)
 
 //ProgressPar
             ZStack {
-                Text("1/7")
+                Text(testNum)
                     .font(.custom("Helvetica", size: 21))
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
@@ -67,7 +78,7 @@ struct AnxietyTestView2: View {
                 
                 Path() { path in
                     path.move(to: CGPoint(x: 20, y: 300))
-                    path.addLine(to: CGPoint(x: 140, y: 300))
+                    path.addLine(to: CGPoint(x: progressValue, y: 300))
                 }.stroke( Color("SecondaryColorGreyGreen"), lineWidth: 4)
             }
         }//genral VStack
@@ -76,6 +87,6 @@ struct AnxietyTestView2: View {
 
 struct AnxietyTestView2_Previews: PreviewProvider {
     static var previews: some View {
-        AnxietyTestView2()
+        AnxietyTestView2(testQuestion: "Not being able to stop or control worrying ?", progressValue: 105, testNum: "2/7", secondViewToNav: AnxietyTestView3())
     }
 }
