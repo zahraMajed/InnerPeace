@@ -11,6 +11,7 @@ import SwiftUICharts
 struct TestReportView: View {
     @EnvironmentObject var anxietySettingObj : AnxietySettings
     @EnvironmentObject var depressionSettingObj : DepressionSettings
+    @State private var showNextScreen = false
     
     //MARK: Variables
     let chartStyle = ChartStyle(backgroundColor: .white, accentColor: Color("SecondaryColorGreyGreen"), secondGradientColor: Color("SecondaryColorBeige"), textColor: .black, legendTextColor: .black, dropShadowColor: .white)
@@ -57,12 +58,15 @@ struct TestReportView: View {
             Spacer()
             
             Button("Discover my routine") {
-                //got to RoutineView()
+                showNextScreen = true
             }
             .frame(width: 346, height: 41)
             .background(Color("PrimaryColorB"))
             .foregroundColor(.white)
             .cornerRadius(10)
+            .fullScreenCover(isPresented: $showNextScreen) {
+                RoutineView()
+            }
             Spacer()
         }
     }

@@ -10,20 +10,13 @@ import SwiftUI
 struct NewHabitsView: View {
     //MARK: Variable
     @EnvironmentObject var routineSettingObj : RoutineSettings
-    
-   // @State var newHabitList : [String] = []
     @State private var showNextScreen = false
     
     //MARK: Body
     var body: some View {
         NavigationView {
             
-            
-            
             VStack {
-                
-              
-                
                 Spacer()
                 Text("Choose and prioirtize fun new habits for you!")
                     .font(.custom("Helvetica", size: 21))
@@ -32,12 +25,8 @@ struct NewHabitsView: View {
                     .frame(width: 323, height: 52, alignment: .leading)
                 Spacer()
                 //creating list
-              
-                
-                
                 List {
-                    ForEach(routineSettingObj.newUserHabitsArray , id: \.self)
-                    { habit in
+                    ForEach(routineSettingObj.newUserHabitsArray , id: \.self) { habit in
                         Text(habit)
                             .font(.custom("Helvetica", size: 21))
                             .fontWeight(.regular)
@@ -65,7 +54,6 @@ struct NewHabitsView: View {
             }.onAppear{
                filterArray ()
             }
-            
             //end general VStack
         }
     }
@@ -75,14 +63,11 @@ struct NewHabitsView: View {
         routineSettingObj.newUserHabitsArray.remove(atOffsets: offsets)
     }
     
-    
-    
     func filterArray ()
     {
         for habit in routineSettingObj.HabitsArray
         {
             print("--- the Habit is : \(habit)")
-
             if !routineSettingObj.userHabitsArray.contains(habit) {
                //newHabitList.append(habit)
                 print("--- the  newUserHabit is : \(habit)")
@@ -90,7 +75,6 @@ struct NewHabitsView: View {
             }
         }
         print(routineSettingObj.newUserHabitsArray)
-
     }
     
     

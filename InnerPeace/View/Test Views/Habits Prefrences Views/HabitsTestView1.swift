@@ -67,7 +67,6 @@ struct HabitsTestView1: View {
                 
                 NavigationLink {
                     NewHabitsView()
-                        
                 } label: {
                     Text("Next")
                         .font(.custom("Helvetica", size: 21))

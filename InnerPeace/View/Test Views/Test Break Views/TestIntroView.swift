@@ -11,6 +11,7 @@ struct TestIntroView: View {
     
     //MARK: Variable
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @State private var showNextScreen = false
     
     //MARK: Body
     var body: some View {
@@ -73,11 +74,15 @@ struct TestIntroView: View {
             
             //Button
             Button("Start Anxiety test") {
-                }
+                showNextScreen = true
+            }
             .frame(width: 327, height: 41)
             .background(Color("PrimaryColorB"))
             .foregroundColor(.white)
             .cornerRadius(10)
+            .fullScreenCover(isPresented: $showNextScreen) {
+                AnxietyTestView1()
+            }
             Spacer()
         }.fullScreenCover(isPresented: $shouldShowOnboarding) {
             OnboardingScreensView(shouldShowOnboarding: $shouldShowOnboarding)}
