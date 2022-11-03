@@ -21,6 +21,12 @@ struct TestReportView: View {
     var body: some View {
         VStack {
             Spacer()
+                Text("Test Report")
+                .font(.custom("Helvetica", size: 34))
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+                .frame(width: 353, height: 60, alignment: .leading)
+            
             BarChartView(data: ChartData(values: [("Anxiety", anxietySettingObj.score), ("Depression", depressionSettingObj.score)]), title: "", style: chartStyle, form: CGSize(width: 300, height: 300), animatedToBack: true)
                 .padding(.leading, 45.0)
             
