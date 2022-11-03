@@ -54,7 +54,7 @@ struct NewHabitsView: View {
             }.onAppear{
                filterArray ()
             }
-            //end general VStack
+
         }
     }
     

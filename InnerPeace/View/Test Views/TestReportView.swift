@@ -11,6 +11,7 @@ import SwiftUICharts
 struct TestReportView: View {
     @EnvironmentObject var anxietySettingObj : AnxietySettings
     @EnvironmentObject var depressionSettingObj : DepressionSettings
+    @EnvironmentObject var routineSettingObj : RoutineSettings
     @State private var showNextScreen = false
     
     //MARK: Variables
@@ -68,7 +69,7 @@ struct TestReportView: View {
                 RoutineView()
             }
             Spacer()
-        }
+        }.environmentObject(routineSettingObj)
     }
     
 }

@@ -11,7 +11,8 @@ import Collections
 struct RoutineView: View {
     
     //MARK: Variable
-    let routineList = ["Exercises", "Meditation", "Music", "Journaling"]
+    @EnvironmentObject var routineSettingObj : RoutineSettings
+    @State var routineList : [String] = ["Exercises","Music","Painting","Journaling"]
     @State private var isChecked: OrderedDictionary = [
         "Mon": false,
         "Tue": false,
@@ -73,7 +74,6 @@ struct RoutineView: View {
                                         Image(systemName: isChecked ? "checkmark.circle.fill" : "circle.fill").foregroundColor(Color("SecondaryColorGreyGreen"))
                                     }
                                 }*/
-                    
                                 
                                 Button {
                                  isChecked["Mon"]?.toggle()
@@ -149,10 +149,16 @@ struct RoutineView: View {
                         }
                     }.listRowSeparator(.hidden)
                 }.listStyle(.plain)
-            }//emd the general VStack
+            }/*.onAppear{
+                makeRoutine()
+             }*/
         }//end navigation view
     }
     //MARK: Fuction
+     /*func makeRoutine() {
+        routineList  = routineSettingObj.userHabitsArray
+        routineList.append(routineSettingObj.newUserHabitsArray[0])
+    }*/
     
 }
 

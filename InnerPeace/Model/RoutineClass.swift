@@ -19,5 +19,6 @@ class RoutineSettings: ObservableObject , Identifiable {
     
     @Published var userHabitsArray = [String]()
     @Published var newUserHabitsArray : [String] = []
+    @Published var userRoutine : [String] = []
     @Published var HabitsArray = ["Exercises", "Meditation", "Painting", "Music", "Journaling", "Naturalise"]
 }
