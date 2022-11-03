@@ -26,35 +26,23 @@ struct TestReportView: View {
             
             Spacer()
             VStack (spacing: 28){
-                
-                HStack {
-                    Text("Anxiety")
+                Text(getAnxietyStatus())
+                    .font(.custom("Helvetica", size: 21))
+                    .fontWeight(.regular)
+                    .padding(.leading)
+                    .frame(width: 346.0, height: 48.0, alignment: .leading)
+                    .background(RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color("PrimaryColorB"), lineWidth: 1)
+                    .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2))
+
+                    Text(getDepressionStatus())
                         .font(.custom("Helvetica", size: 21))
                         .fontWeight(.regular)
                         .padding(.leading)
-                    Text("20 | 100")
-                        .font(.custom("Helvetica", size: 21))
-                        .fontWeight(.regular)
-                }
-                .frame(width: 346.0, height: 48.0, alignment: .leading)
-                .background(RoundedRectangle(cornerRadius: 8)
-                .stroke(Color("PrimaryColorB"), lineWidth: 1)
-                .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2))
-                
-                HStack {
-                    Text("Depression")
-                        .font(.custom("Helvetica", size: 21))
-                        .fontWeight(.regular)
-                        .padding(.leading)
-                    Text("20 | 100")
-                        .font(.custom("Helvetica", size: 21))
-                        .fontWeight(.regular)
-                }
-                .frame(width: 346.0, height: 48.0, alignment: .leading)
-                .background(RoundedRectangle(cornerRadius: 8)
-                .stroke(Color("PrimaryColorB"), lineWidth: 1)
-                .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2))
-                
+                        .frame(width: 346.0, height: 48.0, alignment: .leading)
+                        .background(RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color("PrimaryColorB"), lineWidth: 1)
+                            .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2))
             }
             Spacer()
             
@@ -71,6 +59,40 @@ struct TestReportView: View {
             Spacer()
         }.environmentObject(routineSettingObj)
     }
+    //MARK: Function
+    private func getAnxietyStatus() -> String {
+        let anxietyScore = anxietySettingObj.score
+        switch anxietyScore {
+        case 0..<5:
+            return "No Anxiety"
+        case 5..<10:
+            return "Mild Anxiety"
+        case 10..<15:
+            return "Moderate Anxiety"
+        case 15..<22:
+            return "Sever Anxiety"
+        default:
+            return ""
+        }
+    }
+    
+    private func getDepressionStatus() -> String {
+        let depressionScore = depressionSettingObj.score
+        switch depressionScore {
+        case 0..<5:
+            return "No Depression"
+        case 5..<10:
+            return "Mild Depression"
+        case 10..<15:
+            return "Moderate Depression"
+        case 15..<21:
+            return "Moderately Sever Depression"
+        case 21..<28:
+            return "Sever Depression"
+        default:
+            return ""
+        }
+    }
     
 }
 
@@ -78,5 +100,6 @@ struct TestReportView_Previews: PreviewProvider {
     static var previews: some View {
         TestReportView()
             .environmentObject(AnxietySettings()).environmentObject(DepressionSettings())
+            .environmentObject(RoutineSettings())
     }
 }
