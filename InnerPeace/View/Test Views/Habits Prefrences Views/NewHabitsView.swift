@@ -15,9 +15,14 @@ struct NewHabitsView: View {
     //MARK: Body
     var body: some View {
         NavigationView {
-            
             VStack {
                 Spacer()
+                Text("Habits Test")
+                .font(.custom("Helvetica", size: 34))
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+                .frame(width: 353, height: 60, alignment: .leading)
+                
                 Text("Choose and prioirtize fun new habits for you!")
                     .font(.custom("Helvetica", size: 21))
                     .fontWeight(.bold)
@@ -54,7 +59,6 @@ struct NewHabitsView: View {
             }.onAppear{
                filterArray ()
             }
-
         }
     }
     
@@ -82,5 +86,6 @@ struct NewHabitsView: View {
 struct NewHabitsView_Previews: PreviewProvider {
     static var previews: some View {
         NewHabitsView()
+            .environmentObject(RoutineSettings())
     }
 }
