@@ -43,7 +43,7 @@ struct AnxietyTestView2<Content: View>: View {
             .fontWeight(.bold)
             .frame(width: 346, alignment: .leading)
             .frame(maxWidth: .infinity)
-            .offset(x:10,y: 80)
+            .offset(x:0,y: 80)
         
 // Answers
             VStack(spacing: 20){

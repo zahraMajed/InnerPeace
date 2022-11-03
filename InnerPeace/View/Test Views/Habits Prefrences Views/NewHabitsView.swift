@@ -9,13 +9,21 @@ import SwiftUI
 
 struct NewHabitsView: View {
     //MARK: Variable
-    @State var newHabitList = ["Exercises", "Meditation", "Painting", "Music", "Journaling", "Naturalise"]
+    @EnvironmentObject var routineSettingObj : RoutineSettings
+    
+   // @State var newHabitList : [String] = []
     @State private var showNextScreen = false
     
     //MARK: Body
     var body: some View {
         NavigationView {
+            
+            
+            
             VStack {
+                
+              
+                
                 Spacer()
                 Text("Choose and prioirtize fun new habits for you!")
                     .font(.custom("Helvetica", size: 21))
@@ -24,14 +32,18 @@ struct NewHabitsView: View {
                     .frame(width: 323, height: 52, alignment: .leading)
                 Spacer()
                 //creating list
+              
+                
+                
                 List {
-                    ForEach(0..<newHabitList.count) { index in
-                       Text(newHabitList[index])
+                    ForEach(routineSettingObj.newUserHabitsArray , id: \.self)
+                    { habit in
+                        Text(habit)
                             .font(.custom("Helvetica", size: 21))
                             .fontWeight(.regular)
                             .padding(.bottom, 12)
                     }.onMove(perform: { indexSet, index in
-                        self.newHabitList.move(fromOffsets: indexSet, toOffset: index)
+                        self.routineSettingObj.newUserHabitsArray.move(fromOffsets: indexSet, toOffset: index)
                     }).onDelete(perform: delete)
                         .listRowSeparator(.hidden)
                 }.frame(maxHeight: 400)
@@ -50,19 +62,39 @@ struct NewHabitsView: View {
                     SettingRoutineView()
                 }
                 Spacer()
-                
-
-            }//end general VStack
+            }.onAppear{
+               filterArray ()
+            }
+            
+            //end general VStack
         }
     }
     
-    //MARK: Functions
+    //MARK: Functionsid
     func delete(at offsets: IndexSet) {
-            newHabitList.remove(atOffsets: offsets)
+        routineSettingObj.newUserHabitsArray.remove(atOffsets: offsets)
+    }
+    
+    
+    
+    func filterArray ()
+    {
+        for habit in routineSettingObj.HabitsArray
+        {
+            print("--- the Habit is : \(habit)")
+
+            if !routineSettingObj.userHabitsArray.contains(habit) {
+               //newHabitList.append(habit)
+                print("--- the  newUserHabit is : \(habit)")
+                routineSettingObj.newUserHabitsArray.append(habit)
+            }
         }
+        print(routineSettingObj.newUserHabitsArray)
+
+    }
+    
     
 }
-
 struct NewHabitsView_Previews: PreviewProvider {
     static var previews: some View {
         NewHabitsView()
