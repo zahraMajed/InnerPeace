@@ -38,6 +38,7 @@
 		2BDA31BF2912ABE0002BDE6C /* NewHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31BE2912ABE0002BDE6C /* NewHabitsView.swift */; };
 		2BDA31C12913BC90002BDE6C /* RoutineClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA31C02913BC90002BDE6C /* RoutineClass.swift */; };
 		2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */; };
+		44A9D9E92913F5180034FE7B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D9E82913F5180034FE7B /* UserProfileView.swift */; };
 		56B7F22D29100DFF00E9E870 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7F22C29100DFF00E9E870 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		2BDA31BE2912ABE0002BDE6C /* NewHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitsView.swift; sourceTree = "<group>"; };
 		2BDA31C02913BC90002BDE6C /* RoutineClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineClass.swift; sourceTree = "<group>"; };
 		2BEFDFF1290E957D009C56F6 /* TestBreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBreakView.swift; sourceTree = "<group>"; };
+		44A9D9E82913F5180034FE7B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		56B7F22C29100DFF00E9E870 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 		2B39E0DF290A6070004B4284 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44A9D9E72913F4E00034FE7B /* Users View */,
 				2B39E0EF290A8A9D004B4284 /* Onboarding Views */,
 				2B39E0F6290A8C35004B4284 /* Test Views */,
 				2B81966F290FC9C100C5649B /* Routine Views */,
@@ -216,6 +219,14 @@
 				2BDA31BE2912ABE0002BDE6C /* NewHabitsView.swift */,
 			);
 			path = "Habits Prefrences Views";
+			sourceTree = "<group>";
+		};
+		44A9D9E72913F4E00034FE7B /* Users View */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D9E82913F5180034FE7B /* UserProfileView.swift */,
+			);
+			path = "Users View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				2B81967929100D6800C5649B /* HabitsTestView1.swift in Sources */,
 				2BDA31B1291249BF002BDE6C /* AnxietyTestView3.swift in Sources */,
 				2B39E0F9290A8C5F004B4284 /* TestIntroView.swift in Sources */,
+				44A9D9E92913F5180034FE7B /* UserProfileView.swift in Sources */,
 				2B819671290FC9F100C5649B /* RoutineView.swift in Sources */,
 				2BEFDFF2290E957D009C56F6 /* TestBreakView.swift in Sources */,
 				2BDA31B5291286D0002BDE6C /* DepressionTestView1.swift in Sources */,
