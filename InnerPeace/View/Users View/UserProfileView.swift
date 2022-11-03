@@ -43,9 +43,6 @@ struct UserProfileView: View {
                     RoundedRectangle(cornerRadius: 8)
                     .stroke(Color("PrimaryColorB"), lineWidth: 1)
                     .shadow(color: Color("PrimaryColorB"), radius: 2, x: 0, y: 2))
-                    
-                    
-                    
                 }
                 
                 Button {
