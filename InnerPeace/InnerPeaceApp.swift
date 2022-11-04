@@ -14,7 +14,7 @@ struct InnerPeaceApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            HabitsTestView1()
                 .tint(Color("SecondaryColorGreyGreen"))
         }
     }

@@ -14,7 +14,7 @@ struct NewHabitsView: View {
     
     //MARK: Body
     var body: some View {
-        NavigationView {
+        //NavigationView {
             VStack {
                 Spacer()
                 Text("Habits Test")
@@ -58,7 +58,7 @@ struct NewHabitsView: View {
                 Spacer()
             }.onAppear{
                filterArray ()
-            }
+            //}
         }
     }
     

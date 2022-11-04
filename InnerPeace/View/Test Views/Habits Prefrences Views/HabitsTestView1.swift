@@ -11,6 +11,7 @@ import Collections
 struct HabitsTestView1: View {
     //MARK: Variable
     @StateObject var routineSettingObj = RoutineSettings()
+    @State private var hideBar = true
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 144))
     ]
@@ -71,7 +72,12 @@ struct HabitsTestView1: View {
                     Text("Next")
                         .font(.custom("Helvetica", size: 21))
                         .foregroundColor(Color("PrimaryColorB"))
-                }
+                }.simultaneousGesture(TapGesture().onEnded {
+                    self.hideBar = false
+                 })
+            }.navigationBarHidden(hideBar)
+                .onAppear {
+                self.hideBar = true 
             }//general VStack
         }.environmentObject(routineSettingObj)
     }
