@@ -76,6 +76,7 @@ struct HabitsTestView1: View {
                 }.simultaneousGesture(TapGesture().onEnded {
                     self.hideBar = false
                  })
+
              //end General VStack
             }.navigationBarHidden(hideBar)
                 .onAppear {

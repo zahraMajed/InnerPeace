@@ -48,7 +48,7 @@ struct UserProfileView: View {
                 Button {
                     
                 } label: {
-                    Text("pending Hapits")
+                    Text("Pending Habits")
                     .font(.custom("Helvetica", size: 21))
                     .foregroundColor(.black)
                     .frame(width: 346.0, height: 48.0)
@@ -63,7 +63,7 @@ struct UserProfileView: View {
                 
             }
             Spacer()
-            
+            /*
             Button {
                 
             } label: {
@@ -74,7 +74,7 @@ struct UserProfileView: View {
                  .background(Color("PrimaryColorB"))
                  .cornerRadius(10)
             }
-            
+            */
             Spacer()
         }
     }

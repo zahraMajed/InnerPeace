@@ -16,8 +16,7 @@ struct NewHabitsView: View {
     var body: some View {
         //NavigationView {
             VStack {
-                Spacer()
-                Text("Habits Test")
+                Text("Build Habits")
                 .font(.custom("Helvetica", size: 34))
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)

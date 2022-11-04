@@ -27,11 +27,22 @@ struct RoutineView: View {
         NavigationView {
             VStack{
                 Spacer()
-                Text(Calendar.current.component( .hour, from:Date() ) < 12 ? "Good morning!" : "Good afternoon!")
-                    .font(.custom("Helvetica", size: 25))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.black)
-                    .frame(width: 353, height: 60, alignment: .leading)
+                HStack {
+                
+                    Text(Calendar.current.component( .hour, from:Date() ) < 12 ? "Good morning!" : "Good afternoon!")
+                        .font(.custom("Helvetica", size: 25))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black)
+                        .frame(width: 330, height: 60, alignment: .leading)
+                    
+                    NavigationLink {
+                        UserProfileView()
+                    } label: {
+                        Image(systemName: "person")
+                            .foregroundColor(Color.black)
+                    }
+                }
+                
                 Spacer()
                 ZStack{
                     Image("ProgressRectangle")
