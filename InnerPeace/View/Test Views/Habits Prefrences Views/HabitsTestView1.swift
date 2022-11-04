@@ -26,12 +26,13 @@ struct HabitsTestView1: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
                     .frame(width: 353, height: 60, alignment: .leading)
-         
+                            
                 Text("Choose your current habits")
                     .font(.custom("Helvetica", size: 21))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
-                    .frame(width: 323, height: 52, alignment: .leading)
+                    .frame(width: 346, height: 52, alignment: .leading)
+                    .padding()
                 
                 ScrollView {
                     LazyVGrid(columns: adaptiveColumns, spacing: 20) {
@@ -75,10 +76,11 @@ struct HabitsTestView1: View {
                 }.simultaneousGesture(TapGesture().onEnded {
                     self.hideBar = false
                  })
+             //end General VStack
             }.navigationBarHidden(hideBar)
                 .onAppear {
                 self.hideBar = true 
-            }//general VStack
+            }
         }.environmentObject(routineSettingObj)
     }
 }

@@ -27,7 +27,9 @@ struct NewHabitsView: View {
                     .font(.custom("Helvetica", size: 21))
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
-                    .frame(width: 323, height: 52, alignment: .leading)
+                    .frame(width: 346, height: 52, alignment: .leading)
+                    .padding()
+                
                 Spacer()
                 //creating list
                 List {
@@ -44,7 +46,7 @@ struct NewHabitsView: View {
                     .listStyle(.plain)
                     .padding()
                     .navigationBarItems(trailing: EditButton())
-                
+                Spacer()
                 Button("Done") {
                     showNextScreen = true
                 }
@@ -56,9 +58,10 @@ struct NewHabitsView: View {
                     SettingRoutineView()
                 }
                 Spacer()
+                Spacer()
             }.onAppear{
                filterArray ()
-            //}
+            // }
         }
     }
     
