@@ -7,7 +7,23 @@
 
 import SwiftUI
 
+struct Result: Codable {
+    let trackId: Int
+    let trackName: String
+    let collectionName: String
+}
+
+struct Resonse: Codable {
+    let results: [Result]
+}
+
 struct MusicView: View {
+    //MARK: Varibale
+    private let adaptiveColumns = [
+        GridItem(.adaptive(minimum: 144))
+    ]
+    @State var results = [Result]()
+    
     var body: some View {
     
         VStack (spacing: 8){
@@ -16,78 +32,48 @@ struct MusicView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 400.0 , height:400.0 )
+                .cornerRadius(10)
                 .ignoresSafeArea()
-            
-            Spacer()
-            
-        
-        HStack{
-            Spacer()
-            VStack {
-            Button {
-    
-            } label: {
-                Image("Jazz")
-                    .resizable()
-                    .frame(width: 160.0, height: 160.0)
-                    .cornerRadius(8)
-                    .position(x: 90, y:50)
-            }
-            Text("Jazz")
-                 .font(.custom("Helvetica", size: 21))
-            }
-        Spacer()
-        VStack{
-            Button {
-              
-            } label: {
-                Image("Rock")
-                    .resizable()
-                    .frame(width: 160.0, height: 160.0)
-                    .cornerRadius(8)
-                    .position(x: 90, y:50)
-            }
-            Text("Rock")
-                 .font(.custom("Helvetica", size: 21))
-        }}
-        Spacer()
-        HStack {
-            Spacer()
-            VStack{
-                Button {
-                  
-                } label: {
-                    Image("Cello")
+       
+            List(results, id: \.trackId) { item in
+                HStack() {
+                    Image("Jazz")
                         .resizable()
-                        .frame(width: 160.0, height: 160.0)
+                        .frame(width: 100, height: 100)
                         .cornerRadius(8)
-                        .position(x: 90, y:66)
+                    VStack (alignment: .leading) {
+                        Spacer()
+                        Text(item.trackName)
+                            .font(.headline)
+                        Spacer()
+                        Text(item.collectionName)
+                        Spacer()
+                    }
+                }//end vstack
+            }.listStyle(.plain)
+                .onAppear {
+                loadData()
+            }
+            Spacer()
+        }
+    }
+    func loadData() {
+        guard let url = URL(string: "http://itunes.apple.com/search?term=taylor+swift&entity=song") else {
+            print("Invalid URL")
+            return
+        }
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                if let decodedResponse = try? JSONDecoder().decode(Resonse.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.results = decodedResponse.results
+                    }
+                    return
                 }
-                Text("Cello")
-                     .font(.custom("Helvetica", size: 21))
-                     .position(x: 90, y:80)
             }
-        Spacer()
-        VStack{
-            Button {
-              
-            } label: {
-                Image("Piano")
-                    .resizable()
-                    .frame(width: 160.0, height: 160.0)
-                    .cornerRadius(8)
-                    .position(x: 90, y:66)
-            }
-            Text("Piano")
-                 .font(.custom("Helvetica", size: 21))
-                 .position(x: 90, y:80)
-        }
-        }
-        
-        }
-        
-        
-        
+            print("Fetch failed: \(error?.localizedDescription ?? "unknown error")")
+        }.resume()
     }
 }
 
